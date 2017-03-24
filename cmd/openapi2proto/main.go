@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/NYTimes/openapi2proto"
+	"github.com/runeksvendsen/openapi2proto"
 
 	"gopkg.in/yaml.v2"
 )
