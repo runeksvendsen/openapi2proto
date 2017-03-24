@@ -175,7 +175,7 @@ func refType(ref string, defs map[string]*Items) (string, string) {
 				log.Println("## DEBUG OUTPUT BEGIN ##")
 				// log.Println(string(i))
 				log.Println(string(itemType))
-				// log.Println(string(defs[itemType]))
+				log.Println(rawPkg)
 				log.Println("## DEBUG OUTPUT END ##")
 				log.Fatalf("invalid $ref object referenced with a type of %s", i.Type)
 			}
