@@ -172,11 +172,11 @@ func refType(ref string, defs map[string]*Items) (string, string) {
 		if i.Type != "object" && !(i.Type == "string" && len(i.Enum) > 0) {
 			typ, ok := i.Type.(string)
 			if !ok {
-				fmt.Println("## DEBUG OUTPUT BEGIN ##")
-				fmt.Println(string(i))
-				fmt.Println(string(itemType))
-				fmt.Println(string(defs[itemType]))
-				fmt.Println("## DEBUG OUTPUT END ##")
+				log.Println("## DEBUG OUTPUT BEGIN ##")
+				log.Println(string(i))
+				log.Println(string(itemType))
+				log.Println(string(defs[itemType]))
+				log.Println("## DEBUG OUTPUT END ##")
 				log.Fatalf("invalid $ref object referenced with a type of %s", i.Type)
 			}
 			itemType = typ
